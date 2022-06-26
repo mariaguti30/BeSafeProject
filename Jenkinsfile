@@ -27,7 +27,7 @@ pipeline {
                   sh 'docker login -u mariaguti -p ${dockerhubcred}'
                   sh 'docker push mariaguti30/${JOB_NAME}:v1.${BUILD_NUMBER}'
                   sh 'docker push mariaguti30/${JOB_NAME}:latest'
-                  sh 'docker rmi ${JOB_NAME}:v1.${BUILD_NUMBER} tmatin100/${JOB_NAME}:v1.${BUILD_NUMBER} tmatin100/${JOB_NAME}:latest'
+                  sh 'docker rmi ${JOB_NAME}:v1.${BUILD_NUMBER} mariaguti30/${JOB_NAME}:v1.${BUILD_NUMBER} mariaguti30/${JOB_NAME}:latest'
                 }      
             }
         }
